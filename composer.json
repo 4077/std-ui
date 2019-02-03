@@ -1,0 +1,16 @@
+{
+    "name": "fed/std-ui",
+    "type": "ewma-module",
+    "description": "ewma std ui controls",
+    "authors": [
+        {
+            "name": "fed",
+            "email": "ewmafw@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "fed/ewma-module-installer-plugin": "~0.0.1",
+        "fed/fontawesome": "^0.0"
+    }
+}

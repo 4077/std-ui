@@ -1,0 +1,96 @@
+// head {
+@__nodeId__: ~"std_ui_quantify__main";
+// }
+
+.@{__nodeId__} {
+
+    .gradient (@startColor: #eee, @endColor: white) {
+        background-color: @startColor;
+        background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+        background: -webkit-linear-gradient(top, @startColor, @endColor);
+        background: -moz-linear-gradient(top, @startColor, @endColor);
+        background: -ms-linear-gradient(top, @startColor, @endColor);
+        background: -o-linear-gradient(top, @startColor, @endColor);
+    }
+
+    @border_color: #dbdbdb;
+
+    display: flex;
+
+    .button {
+        cursor: pointer;
+        float: left;
+        height: 25px;
+        width: 32px;
+
+        .gradient(#fcfcfc, #f2f2f2);
+
+        border: 1px solid @border_color;
+
+        .icon {
+            margin: 7px 11px;
+            width: 16px;
+            height: 16px;
+            font-size: 14px;
+        }
+
+        &.dec {
+            border-radius: 3px 0 0 3px;
+
+            .icon {
+                color: #535353;
+            }
+        }
+
+        &.inc {
+            border-radius: 0 3px 3px 0;
+
+            .icon {
+                color: #535353;
+            }
+        }
+
+        &.hover {
+
+            &.dec {
+                .gradient(#fe6f63, #f85c57);
+                border-color: #d7675b;
+
+                .icon {
+                    color: #FFFFFF;
+                }
+            }
+
+            &.inc {
+                .gradient(#5EBA52, #43A225);
+                border-color: #5eac5d;
+
+                .icon {
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    .value {
+        float: left;
+        height: 25px;
+        width: 50px;
+
+        border-top: 1px solid @border_color;
+        border-bottom: 1px solid @border_color;
+
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1) inset;
+
+        line-height: 25px;
+
+        text-align: center;
+
+        input {
+            width: 100%;
+            line-height: 25px;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1) inset;
+            text-align: center;
+        }
+    }
+}
